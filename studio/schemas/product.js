@@ -37,17 +37,29 @@ export default {
         name: 'authimg',
         type: 'image',
         title: 'Author Image',
-        validation: Rule => Rule.required(),
+ 
         options: {
             hotspot: true,
         }
+    },
+    {
+      name: 'authlink',
+      type: 'string',
+      title: 'Author Link',
+
+    },
+    {
+      name: 'productlink',
+      type: 'string',
+      title: 'Product Link',
+      
     },
  
       {
         name: 'price',
         type: 'number',
         title: 'Product Price',
-        validation: Rule => Rule.required().min(1).max(10000),
+        validation: Rule => Rule.required().min(0).max(10000),
       },
 
      

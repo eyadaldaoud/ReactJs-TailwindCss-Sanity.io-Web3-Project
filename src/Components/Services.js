@@ -11,11 +11,11 @@ const ServicesBox = ({title, Info, Icon, Styles, Pstyles}) => {
      
         
         <div className={Styles}>
-                  <div className='w-20   flex justify-left'>
+                  <div>
                      <h1 className='serviceHead mt-1'>{Icon}<p className={Pstyles}>{title}</p></h1>
                   </div>
                
-                  <div className=''> 
+                  <div> 
                     <p className='ml-4 mt-4 text-center'>{Info}</p>
                   </div>
                 

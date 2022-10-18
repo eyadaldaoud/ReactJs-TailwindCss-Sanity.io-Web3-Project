@@ -1,13 +1,237 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+
+    background-color: #94a3b8;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+
 }
+
+.darkBg { 
+    background-color: #18181b;
+}
+.dark-glass {
+    background: rgba(24, 24, 27, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(24, 24, 27, 0.3);
+}
+
+.purple-glass {
+    background: rgba(46, 18, 140, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(46, 18, 140, 0.3);
+}
+.white-glass {
+    background: rgba(248, 250, 252, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.8px);
+    -webkit-backdrop-filter: blur(2.8px);
+    border: 1px solid rgba(248, 250, 252, 0.3);
+}
+
+.blue-glass {
+
+    background: rgba(16, 64, 123, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    border: 1px solid rgba(16, 64, 123, 1);
+    
+}
+
+
+
+@media (max-width: 1023px) {
+   
+    .maindiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+ 
+    .firstthree {
+        width: 160px;
+        margin: 20px;
+    }
+
+    .lasttwo {
+        padding: 10px;
+        width: 160px;
+        margin-right: auto;
+        margin: 20px;
+        
+    }
+
+    .maindiv {
+        position: unset;
+    }
+    .search{
+       margin: 20px;
+    }
+}  
+
+@media (max-width: 700px){
+  
+    .infobox {
+        flex-wrap: wrap;
+        
+    }
+    .infobox img{
+        width: 600px;
+    }
+    .servicesShrink, .api-box {
+
+        max-width: 400px;
+        
+        
+    }
+    .footerquery { 
+        height: fit-content;
+    }
+
+    .serviceHead {
+        margin-top: 20px;
+    }
+    .maindiv {
+        position: unset;
+    }
+   
+}
+
+@media (max-width: 457px) {
+    
+    .maindiv {
+        position: unset;
+        display: flex;
+  
+    }
+
+    .servicesShrink, .api-box {
+        max-width: fit-content;
+        border-radius: 20px;
+    }
+
+    .footerquery { 
+        height: fit-content;
+    }
+  
+
+ 
+    .maindiv {
+        position: unset;
+    }
+  
+    
+  
+}
+
+@media (max-width: 150px) {
+    .search{
+        display: none;
+    } 
+}
+
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #22d3ee;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid #4f46e5;
+    border-left: 4px solid transparent;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+.moonan {
+    animation-name: moonan;
+    animation-duration: 1s;
+}
+.sunan {
+    animation-name: sunan;
+    animation-duration: 1s;
+}
+
+@keyframes moonan {
+    10% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes sunan {
+    10% {
+        transform: rotate(120deg);
+    }
+}
+
+
+
+.loader2 {
+    color: green;
+    display: inline-block;
+    position: relative;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  .loader2::after {
+    content: '';  
+    width: 5px;
+    height: 5px;
+    background: currentColor;
+    position: absolute;
+    bottom: 10px;
+    right: -5px;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+      box-shadow: 10px 0 green, 20px 0 rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 10px 0 green, 20px 0 green;
+    }
+  }
+

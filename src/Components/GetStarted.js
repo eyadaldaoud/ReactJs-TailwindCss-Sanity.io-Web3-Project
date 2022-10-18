@@ -6,6 +6,11 @@ import {MdTrendingUp, MdTrendingDown} from 'react-icons/md';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const Carditem = (props) => {
+  return <li className='purple-glass border-2 p-2 m-2 flex hover:scale-110 cursor-pointer hover:bg-slate-800 hover:text-teal-600 ease-in-out duration-500'>{props.name}{props.icon}</li>
+
+}
+
 
 const GetStarted = () => {
    
@@ -51,11 +56,13 @@ const GetStarted = () => {
             <div className='flex justify-center text-left '>
                 
                 <ol className='servicesShrink text-teal-200 dark:text-teal-400 mt-4 text-lg font-bold w-[400px]'>
-                    <li className='purple-glass border-2 p-2 m-2 flex hover:scale-110 cursor-pointer hover:bg-slate-800 hover:text-teal-600 ease-in-out duration-500'>Connect your wallet <BiWallet className='mt-1 ml-auto text- xl'/></li>
-                    <li className='purple-glass border-2 p-2 m-2 flex hover:scale-110 cursor-pointer hover:bg-slate-800 hover:text-teal-600 ease-in-out duration-500'>Your Metamask wallet should pop up<BiNotification className='mt-1 ml-auto text-xl'/></li>
-                    <li className='purple-glass border-2 p-2 m-2 flex hover:scale-110 cursor-pointer hover:bg-slate-800 hover:text-teal-600 ease-in-out duration-500'>Make sure you're on Matic-network<BiShapePolygon className='mt-1 ml-auto text-xl'/></li>
-                    <li className='purple-glass border-2 p-2 m-2 flex hover:scale-110 cursor-pointer hover:bg-slate-800 hover:text-teal-600 ease-in-out duration-500'>Authorise and Connect it<VscRocket className='mt-1 ml-auto text-xl'/></li>
-                    <li className='purple-glass border-2 p-2 m-2 flex hover:scale-110 cursor-pointer hover:bg-slate-800 hover:text-teal-600 ease-in-out duration-500 '>Good job, You're good to go<GiPartyPopper className='mt-1 ml-auto text-xl'/></li>
+
+                    <Carditem name="Connect your wallet" icon={<BiWallet className='mt-1 ml-auto text- xl'/>}/>
+                    <Carditem name="Your Metamask wallet should pop up" icon={<BiNotification className='mt-1 ml-auto text-xl'/>}/>
+                    <Carditem name="Make sure you're on Matic-network" icon={<BiShapePolygon className='mt-1 ml-auto text-xl'/>}/>
+                    <Carditem name="Authorise and Connect it" icon={<VscRocket className='mt-1 ml-auto text-xl'/>}/>
+                    <Carditem name="Good job, You're good to go" icon={<GiPartyPopper className='mt-1 ml-auto text-xl'/>}/>
+
                 </ol>
 
             </div>

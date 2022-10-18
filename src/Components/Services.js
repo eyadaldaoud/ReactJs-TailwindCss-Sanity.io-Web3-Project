@@ -46,7 +46,7 @@ const Services = () => {
 
          Icon={<BiShield  className='text-3xl  text-green-400  ml-2'/>}
 
-         Styles={`servicesShrink flex border-2 min-h-[75px] w-[450px] m-2 p-2 rounded-2xl  border-green-400 font-extrabold   text-green-400 dark:hover:bg-gray-900 cursor-pointer hover:bg-slate-800 ease-in-out duration-300`}/>
+         Styles={`servicesShrink flex border-2  w-[450px] m-2 p-2 rounded-2xl  border-green-400 font-extrabold   text-green-400 dark:hover:bg-gray-900 cursor-pointer hover:bg-slate-800 ease-in-out duration-300`}/>
       </Fade >
       
 

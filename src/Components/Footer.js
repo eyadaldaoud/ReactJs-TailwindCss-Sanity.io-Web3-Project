@@ -15,7 +15,7 @@ const Footer = () => {
 
           <section>
             
-                   <div className='flex mt-6 ml-2'>
+                   <div className='flex flex-wrap mt-6 ml-2'>
                         <a href='https://www.linkedin.com/in/eyad-93327b244' target={'_blank'}><FiLinkedin className='text-2xl ml-2 cursor-pointer hover:bg-slate-800 dark:hover:bg-slate-600 rounded-md ease-in-out duration-500 hover:rounded-xl'/></a>
                         <a href='https://github.com/UGoingNoWhereBoy' target={'_blank'}><FiGithub className='text-2xl ml-2 cursor-pointer hover:bg-slate-800 dark:hover:bg-slate-600 rounded-md ease-in-out duration-500 hover:rounded-xl'/></a>
                         <a href='https://discord.com/users/UGoingNoWhereBoy#1736' target={'_blank'}><SiDiscord className='text-2xl ml-2 cursor-pointer hover:bg-slate-800 dark:hover:bg-slate-600 rounded-md ease-in-out duration-500 hover:rounded-xl'/></a>
@@ -23,7 +23,7 @@ const Footer = () => {
               </section>
 
 
-              <section className='flex ml-auto mr-auto flex-col mt-6'>
+              <section className='flex sm:ml-auto mr-0 ml-20 sm:mr-auto mt-6'>
                    
                    <h1 className='font-extrabold text-xl'>Made with love by UGoingNoWhereBoy</h1>
                  

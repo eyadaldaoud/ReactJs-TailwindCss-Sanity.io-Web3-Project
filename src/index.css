@@ -8,18 +8,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
 
+.App {
+    text-align: center;
+  }
+  
+  
+  
+  .loader4 {
+    width: 4px;
+    height: 86px;
+    background: #0ea5e9;
+    margin: auto;
+    position: relative;
+    animation: shake 1s linear infinite alternate,
+               lightup 1s linear infinite;
+    transform-origin: 0 0;
+  }
+  
+  .loader4::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 16px;
+    box-sizing:border-box;
+    border: 5px solid #27272a;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+  }
+  .loader4::after {
+    content: '';
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 32px;
+    border-radius: 50px 50px 0 0;
+    background: #0ea5e9;
+  }
+  
+  @keyframes shake {
+    0% { transform: rotate(10deg)  }
+    100% { transform: rotate(-10deg)  }
+  }
+  @keyframes lightup {
+    0% ,20% , 40% {
+      opacity: 0
+    }
+    10%, 30% , 50% , 100% {
+      opacity: 1
+    }
+  }
+      
 
-
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body {
 
     background-color: #94a3b8;
     font-family: 'Source Sans Pro', sans-serif;
-    width: 100%;
 
 }
 
@@ -79,11 +128,11 @@ body {
     
 }
 
-.anmain-one {
-     animation-name: anmain-one;
+.anmain {
+     animation-name: anmain;
      animation-duration: 2s;
 }
-@keyframes anmain-one {
+@keyframes anmain {
     0% {
         opacity: 0;
         transform: translateY(-30%);
@@ -96,11 +145,12 @@ body {
   
     
 }
-.anmain {
-    animation-name: anmain;
+.anmain-one {
+    animation-name: anmain-one;
     animation-duration: 2s;
 }
-@keyframes anmain {
+
+@keyframes anmain-one {
    
     50% {
         opacity: 1;
@@ -257,7 +307,17 @@ body {
 }
 
 @media (max-width: 457px) {
-    
+    .shrink-p {
+        max-width: 333px;
+        display: block;
+        justify-content: center;
+    }
+    .shrink-p h1{
+        font-size: 30px;
+    }
+    .author-text {
+        font-size: 20px;
+    }
     .maindiv {
         position: unset;
         display: flex;
@@ -312,6 +372,7 @@ body {
     border-bottom: 4px solid #4f46e5;
     border-left: 4px solid transparent;
   }
+  
   @keyframes rotation {
     0% {
       transform: rotate(0deg);
@@ -320,27 +381,6 @@ body {
       transform: rotate(360deg);
     }
   } 
-
-.moonan {
-    animation-name: moonan;
-    animation-duration: 1s;
-}
-.sunan {
-    animation-name: sunan;
-    animation-duration: 1s;
-}
-
-@keyframes moonan {
-    10% {
-        transform: rotate(360deg);
-    }
-}
-@keyframes sunan {
-    10% {
-        transform: rotate(120deg);
-    }
-}
-
 
 
 .loader2 {

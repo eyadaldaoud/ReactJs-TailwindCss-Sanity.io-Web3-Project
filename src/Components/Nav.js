@@ -88,7 +88,7 @@ const Nav = () => {
 
   return (
   
-    <div className='bg-slate-600 dark:bg-slate-900 fixed w-full z-10  maindiv'>
+    <div>
         
           <nav className='bg-slate-600 dark:bg-slate-900 text-cyan-300 dark:text-cyan-500'>
 

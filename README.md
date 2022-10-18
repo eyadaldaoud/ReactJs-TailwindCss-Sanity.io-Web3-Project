@@ -1,3 +1,3 @@
-## Live Demo: https://jocular-ganache-fca765.netlify.app/
+## Live Demo: https://shimmering-wisp-1be85d.netlify.app/
 
-## this project fully made by me from scratch and i dont appreciate anyone copying it without credits :D
+## this project fully made by me you must give credits if you want to copy the code :D

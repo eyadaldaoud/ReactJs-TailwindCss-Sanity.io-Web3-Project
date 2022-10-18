@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+
 
 * {
     margin: 0;
@@ -20,6 +26,22 @@ body {
 .darkBg { 
     background-color: #18181b;
 }
+
+.font-family {
+    font-family: 'Courgette', cursive;
+}
+
+.font-family-p {
+    font-family: 'Bungee', cursive;
+}
+.font-family-title {
+    font-family: 'Bungee', cursive;
+}
+.font-family-price {
+    
+    font-family: 'Bevan', cursive;
+}
+
 .dark-glass {
     background: rgba(24, 24, 27, 0.4);
     border-radius: 16px;
@@ -57,7 +79,125 @@ body {
     
 }
 
+.anmain-one {
+     animation-name: anmain-one;
+     animation-duration: 2s;
+}
+@keyframes anmain-one {
+    0% {
+        opacity: 0;
+        transform: translateY(-30%);
+        
+    }
+    50% {
+        transform: translateY(0%);
+        opacity: 1;
+       }
+  
+    
+}
+.anmain {
+    animation-name: anmain;
+    animation-duration: 2s;
+}
+@keyframes anmain {
+   
+    50% {
+        opacity: 1;
+       transform: translateY(0%);
+   }
 
+   0% {
+    transform: translateY(30%);
+    opacity: 0;
+   }
+
+   
+}
+
+
+.anmain-nav-one {
+    animation-name: anmain-nav-one;
+    animation-duration: 1s;
+}
+@keyframes anmain-nav-one {
+   
+    25% {
+        
+        opacity: 1;
+       
+   }
+
+   0% {
+    transform: rotateY(-90deg);
+    opacity: 0;
+   }
+
+   
+}
+.anmain-nav {
+    animation-name: anmain-nav;
+    animation-duration: 1s;
+}
+
+@keyframes anmain-nav {
+   
+    25% {
+        opacity: 1;
+  
+   }
+
+   0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+   }
+
+   
+}
+
+.animan-product-page {
+    animation-name: animan-product-page;
+    animation-duration: 1s;
+}
+
+@keyframes animan-product-page {
+    
+    50% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.25;
+        
+   }
+
+   0% {
+    opacity: 0;
+    scale: 25%;
+   
+   }
+
+   
+}
+
+.animan-market {
+    animation-name: animan-market;
+    animation-duration: 3s;
+}
+
+@keyframes animan-market{
+
+    10% {
+        opacity: 1;
+    }
+
+   0% {
+    opacity: 0;
+   
+   }
+
+   
+}
 
 @media (max-width: 1023px) {
    

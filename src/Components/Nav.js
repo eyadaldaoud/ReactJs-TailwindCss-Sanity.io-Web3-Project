@@ -7,7 +7,6 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiSunLine, RiMoonLine } from "react-icons/ri";
 //
-
 import { Link } from 'react-router-dom';
 import Web3 from 'web3';
 import { ethers } from 'ethers'
@@ -64,10 +63,11 @@ const Nav = () => {
       setBalance(ethers.utils.formatEther(bal).slice(0, 6)) 
       const net = await web3.eth.net.getNetworkType()
       setNetwork(net.toUpperCase())
+      console.log(web3.eth.getProof(acc[0]))
 
       
-    }else {
-      alert("You need Metamask")
+    } else {
+      alert("You need to install MetaMask")
     }
 
 
@@ -99,12 +99,12 @@ const Nav = () => {
                      
                  getNav.classList.toggle('hidden')
 
-                 hidden == true ? setMenulogo(<AiOutlineClose />) : setMenulogo(<HiMenu />)
+                 hidden == true ? setMenulogo(<AiOutlineClose className='anmain-nav-one'/>) : setMenulogo(<HiMenu className='anmain-nav'/>)
 
                  setHidden(!hidden)
                  
 
-             }} className='text-5xl hover:bg-slate-700 border-2 border-cyan-300 dark:border-cyan-500 rounded-xl hover:rounded-2xl lg:hidden p-2 ease-in-out duration-300 w-fit'>{menuLogo}</li>
+                }} className='text-5xl hover:bg-slate-700 border-2 border-cyan-300 dark:border-cyan-500 rounded-xl hover:rounded-2xl lg:hidden p-2 ease-in-out duration-300 w-fit'>{menuLogo}</li>
          
 
 
@@ -139,9 +139,7 @@ const Nav = () => {
                   
                   htmlToggle.classList == 'dark' ? localStorage.setItem('Theme', 'dark') : localStorage.setItem('Theme', 'light')
                   htmlToggle.classList == 'dark' ? document.body.classList.add('darkBg') : document.body.removeAttribute('class')
-                  htmlToggle.classList == 'dark' ? setIcon(<RiSunLine className='text-yellow-400'/>) : setIcon(<RiMoonLine className='text-cyan-300'/>) 
-
-
+                  htmlToggle.classList == 'dark' ? setIcon(<RiSunLine className='text-yellow-400 anmain'/>) : setIcon(<RiMoonLine className='text-cyan-300 anmain-one'/>) 
                   
                   
                   }}>

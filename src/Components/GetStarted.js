@@ -3,15 +3,13 @@ import {BiWallet, BiNotification, BiShapePolygon} from 'react-icons/bi';
 import {VscRocket} from 'react-icons/vsc';
 import {GiPartyPopper} from 'react-icons/gi';
 import {MdTrendingUp, MdTrendingDown} from 'react-icons/md';
-
-
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
 const GetStarted = () => {
    
-  const [data, setData] = useState(null)
+  const [data, setData] = useState()
   const [Loading, setLoading] = useState(true)
 
   useEffect(() => {

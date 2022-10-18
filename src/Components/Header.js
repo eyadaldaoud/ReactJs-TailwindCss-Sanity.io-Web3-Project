@@ -15,7 +15,7 @@ const Header = () => {
       <div className='border-cyan-600 p-[60px] mt-20 flex justify-center w-full flex-col'>
 
 
-        <h1 className='text-green-700 font-extrabold dark:text-cyan-400 text-5xl'>🌍's First <a className='text-indigo-600'>WEB3</a> Shop</h1>
+        <h1 className='text-green-700 font-extrabold dark:text-cyan-400 text-5xl font-family'>🌍's First <a className='text-indigo-600'>WEB3</a> Shop</h1>
 
       
       </div>

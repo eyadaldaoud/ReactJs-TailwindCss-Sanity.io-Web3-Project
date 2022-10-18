@@ -41,7 +41,7 @@ const Market = () => {
         {isPending &&<h1 className='text-5xl'><span className="loader2">Fetching Data</span></h1>}
         {!isPending && postData.map((product,index) => (
           <Link to={"/product/" + index} key={index}>
-          <div className='border-2 p-2 m-2 border-teal-400 dark:border-cyan-500 bg-slate-800 rounded-2xl hover:rounded-md hover:shadow-lg ease-in-out duration-300 hover:scale-110' key={index}>
+          <div className='animan-market border-2 p-2 m-2 border-teal-400 dark:border-cyan-500 bg-slate-800 rounded-2xl hover:rounded-md hover:shadow-lg ease-in-out duration-300 hover:scale-110' key={index}>
 
                 
                   
